@@ -14,8 +14,10 @@
 	<body ng-controller="ChatCtrl">
 		<h1>Live chat box</h1>
 		<p>Try typing some text in the box below.</p>
-		<div class="chatbox" ng-repeat="message in messages">
-			<p class="message">{{message.text}}</p>
+		<div class="chatbox">
+			<div class="message" ng-repeat="message in messages">
+				{{message.text}}
+			</div>
 		</div>
 		<form ng-submit="sendMessage(message)">
 			<input ng-model="message">
