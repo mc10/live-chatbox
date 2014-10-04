@@ -1,7 +1,7 @@
 (function(undefined) {
 	var app = angular.module("liveChatApp", ["firebase"]);
 
-	app.controler("ChatCtrl", function($scope, $firebase) {
+	app.controller("ChatCtrl", function($scope, $firebase) {
 		var ref = new Firebase("https://blistering-heat-665.firebaseio.com/data");
 		var sync = $firebase(ref);
 
