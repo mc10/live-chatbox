@@ -1,25 +1,4 @@
-requirejs.config({
-	baseUrl: "js",
-	paths: {
-		"angular": "//ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min",
-		"jquery": "//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min",
-		"firebase": "//cdn.firebase.com/js/client/1.0.21/firebase",
-		"angularfire": "//cdn.firebase.com/libs/angularfire/0.8.2/angularfire.min"
-	},
-	shim: {
-		"angular": {
-			exports: "angular"
-		},
-		"firebase": {
-			exports: "Firebase"
-		},
-		"angularfire": {
-			"deps": ["angular", "firebase"]
-		}
-	}
-});
-
-require(["angularfire"], function(angular, Firebase) {
+(function(undefined) {
 	var app = angular.module("liveChatApp", ["firebase"]);
 
 	app.controler("ChatCtrl", function($scope, $firebase) {
@@ -33,4 +12,4 @@ require(["angularfire"], function(angular, Firebase) {
 			$scope.messages.$add({ message: message });
 		};
 	});
-});
+}());
