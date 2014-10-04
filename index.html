@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" ng-app="liveChatApp">
+	<head>
+		<meta charset="UTF-8">
+		<title>Live chat box</title>
+		<script data-main="js/main" src="//cdnjs.cloudflare.com/ajax/libs/require.js/2.1.14/require.min.js"></script>
+	</head>
+	<body ng-controller="ChatCtrl">
+		<h1>Live chat box</h1>
+		<p>Try typing some text in the box below.</p>
+		<div class="chatbox">
+			<div ng-repeat="message in messages">
+				<input ng-model="message.text">
+			</div>
+		</div>
+		<form ng-submit="sendMessage(message)">
+			<input ng-model="message">
+			<button input="submit">Submit message</button>
+		</form>
+	</body>
+</html>
