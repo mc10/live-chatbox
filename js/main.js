@@ -9,7 +9,7 @@
 		$scope.messages = sync.$asArray();
 
 		$scope.sendMessage = function(message) {
-			$scope.messages.$add({ message: message });
+			$scope.messages.$add({ text: message });
 		};
 	});
 }());
