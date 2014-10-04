@@ -17,6 +17,7 @@
 		<div class="chatbox">
 			<div class="message" ng-repeat="message in messages">
 				{{message.text}}
+				<button ng-click="messages.$remove(message)">X</button>
 			</div>
 		</div>
 		<form ng-submit="sendMessage(message)">
