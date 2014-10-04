@@ -10,7 +10,7 @@
 		<p>Try typing some text in the box below.</p>
 		<div class="chatbox">
 			<div ng-repeat="message in messages">
-				<input ng-model="message.text">
+				<p ng-model="message.text"></p>
 			</div>
 		</div>
 		<form ng-submit="sendMessage(message)">
