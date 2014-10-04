@@ -3,6 +3,9 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>Live chat box</title>
+
+		<link rel="stylesheet" href="css/main.css">
+
 		<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 		<script src="//cdn.firebase.com/js/client/1.0.21/firebase.js"></script>
@@ -11,10 +14,8 @@
 	<body ng-controller="ChatCtrl">
 		<h1>Live chat box</h1>
 		<p>Try typing some text in the box below.</p>
-		<div class="chatbox">
-			<div ng-repeat="message in messages">
-				<p>{{message.text}}</p>
-			</div>
+		<div class="chatbox" ng-repeat="message in messages">
+			<p class="message">{{message.text}}</p>
 		</div>
 		<form ng-submit="sendMessage(message)">
 			<input ng-model="message">
