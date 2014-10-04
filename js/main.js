@@ -19,7 +19,7 @@ requirejs.config({
 	}
 });
 
-define(["angular", "firebase", "angularfire"], function(angular, Firebase) {
+require(["angularfire"], function(angular, Firebase) {
 	var app = angular.module("liveChatApp", ["firebase"]);
 
 	app.controler("ChatCtrl", function($scope, $firebase) {
