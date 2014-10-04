@@ -7,11 +7,19 @@ requirejs.config({
 		"angularfire": "//cdn.firebase.com/libs/angularfire/0.8.2/angularfire.min"
 	},
 	shim: {
-		"angularfire": ["angular", "firebase"]
+		"angular": {
+			exports: "angular"
+		},
+		"firebase": {
+			exports: "Firebase"
+		},
+		"angularfire": {
+			"deps": ["angular", "firebase"]
+		}
 	}
 });
 
-require(["angularfire"], function() {
+require(["angular", "firebase", "angularfire"], function(angular, Firebase) {
 	var app = angular.module("liveChatApp", ["firebase"]);
 
 	app.controler("ChatCtrl", function($scope, $firebase) {
